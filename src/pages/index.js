@@ -1,21 +1,7 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import BandList from './bandlist';
 
-const inter = Inter({ subsets: ['latin'] })
+const Home = () => {
+  return <BandList />;
+};
 
-export default function Home() {
-  return (
-    <main>
-
-
- <h1>Fetcing data</h1>
-
-
-
-
-
-
-      
-    </main>
-  )
-}
+export default Home;
