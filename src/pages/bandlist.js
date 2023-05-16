@@ -22,8 +22,9 @@ const BandList = () => {
       <h1>Bands</h1>
       <ul>
         {bands.map((band) => (
-          <li key={band.id}>{band.name}</li>
+          <li key={band.id}>  <strong> band: {band.name}</strong> <br/> <strong> Genre: </strong> {band.genre}</li>
         ))}
+        
       </ul>
     </div>
   );
