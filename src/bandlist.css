@@ -1,0 +1,48 @@
+/* .bandList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  list-style: none;
+  }
+  
+  .bandItem {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .title{
+
+
+    color: aquamarine;
+  } */
+
+  .band-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .bandList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .bandList li {
+    width: 33.33%; /* Three bands per row */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .bandList li strong {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .bandList li img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  

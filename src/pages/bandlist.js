@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import '../styles/globals.css';
+
 
 
 
@@ -27,20 +27,22 @@ const BandList = () => {
   };
 
   return (
-    <div>
-      <h1>Bands</h1>
-      <ul>
+    
+        <div class="band-container">    
+      <h1 className='title'>Bands</h1>
+      <ul className='bandList'>
         {bands.map((band) => (
           <li key={band.id}>
          
             <strong>{band.name}</strong>
             <br />
         
-            {band.genre}       <img src={generateRandomImage()} alt={`${band.name} Logo`} />
+            {band.genre}  <img src={generateRandomImage()} alt={`${band.name} Logo`} />
           </li>
         ))}
       </ul>
-    </div>
+ </div>
+    
   );
 };
 
