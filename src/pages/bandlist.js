@@ -1,4 +1,8 @@
+
 import { useEffect, useState } from 'react';
+import '../styles/globals.css';
+
+
 
 const BandList = () => {
   const [bands, setBands] = useState([]);
@@ -17,14 +21,24 @@ const BandList = () => {
     fetchData();
   }, []);
 
+  const generateRandomImage = () => {
+    const randomNumber = Math.floor(Math.random() * 1000);
+    return `https://source.unsplash.com/200x200/?music,bands/${randomNumber}`;
+  };
+
   return (
     <div>
       <h1>Bands</h1>
       <ul>
         {bands.map((band) => (
-          <li key={band.id}>  <strong> band: {band.name}</strong> <br/> <strong> Genre: </strong> {band.genre}</li>
-        ))}
+          <li key={band.id}>
+         
+            <strong>{band.name}</strong>
+            <br />
         
+            {band.genre}       <img src={generateRandomImage()} alt={`${band.name} Logo`} />
+          </li>
+        ))}
       </ul>
     </div>
   );
