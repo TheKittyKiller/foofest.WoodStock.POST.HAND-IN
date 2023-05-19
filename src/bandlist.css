@@ -1,21 +1,3 @@
-/* .bandList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  list-style: none;
-  }
-  
-  .bandItem {
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .title{
-
-
-    color: aquamarine;
-  } */
 
   .band-container {
     display: flex;
@@ -24,12 +6,15 @@
   }
   
   .bandList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     padding: 0;
   }
   
   .bandList li {
-    width: 33.33%; /* Three bands per row */
+    flex-basis: 33.33%; /* Three bands per row */
     text-align: center;
     margin-bottom: 20px;
   }
@@ -46,3 +31,29 @@
     margin: 0 auto;
   }
   
+
+  @media (max-width: 768px) {
+    /* Two bands per row on smaller screens */
+    .bandList li {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* One band per row on even smaller screens */
+    .bandList li {
+      flex-basis: 100%;
+    }
+  }
+  
+  .bandList li strong {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .bandList li img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }

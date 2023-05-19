@@ -35,9 +35,9 @@ const BandList = () => {
           <li key={band.id}>
          
             <strong>{band.name}</strong>
-            <br />
+            <br/>
         
-            {band.genre}  <img src={generateRandomImage()} alt={`${band.name} Logo`} />
+            <img src={generateRandomImage()} alt={`${band.name} Logo`} />
           </li>
         ))}
       </ul>
