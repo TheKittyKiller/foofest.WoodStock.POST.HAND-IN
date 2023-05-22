@@ -33,19 +33,22 @@ const BandDetails = () => {
     return `https://source.unsplash.com/200x200/?music,bands/${randomNumber}`;
   };
 
+  console.log(band.members)
   return (
     <div className="band-container2">
       <div className="band-content2">
         <h1 className="title">{band.name}</h1>
         <div className="band-info">
-          <p>Genre: {band.genre}</p>
           <img src={generateRandomImage()} alt={`${band.name} Logo`} />
-          <p>Members: {band.members}</p>
-          <p>Description: {band.bio}</p>
-          <Link href="/bandList">
-            <p className="home-button">Home</p>
-          </Link>
+          <div>
+            <p>Genre: {band.genre}</p>
+            <p>Members: {band.members.join(', ')}</p>
+            <p>Description: {band.bio}</p>
+          </div>
         </div>
+        <Link href="/bandList">
+          <p className="home-button">Home</p>
+        </Link>
       </div>
     </div>
   );
