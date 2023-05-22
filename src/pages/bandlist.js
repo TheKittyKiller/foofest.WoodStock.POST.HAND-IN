@@ -1,8 +1,5 @@
-
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
-
-
 
 const BandList = () => {
   const [bands, setBands] = useState([]);
@@ -27,22 +24,23 @@ const BandList = () => {
   };
 
   return (
-    
-        <div class="band-container">    
+    <div className="band-container">
       <h1 className='title'>Bands</h1>
       <ul className='bandList'>
         {bands.map((band) => (
-          <li key={band.id}>
-         
-            <strong>{band.name}</strong>
-            <br/>
-        
-            <img src={generateRandomImage()} alt={`${band.name} Logo`} />
+          <li key={band.slug}>
+    
+              
+                <strong >{band.name}</strong>
+                <br/>
+                     <Link href={`/band/${band.slug}`}>   <img src={generateRandomImage()} alt={`${band.name} Logo`} />
+              
+            </Link>
           </li>
+
         ))}
       </ul>
- </div>
-    
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 
-
 import '../bandlist.css';
+import '../slug.css';
 
 function MyApp({ Component, pageProps }) {
   // Your app component

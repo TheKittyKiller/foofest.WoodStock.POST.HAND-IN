@@ -1,4 +1,4 @@
-import BandList from './bandlist';
+import BandList from './bandList';
 
 const Home = () => {
   return <BandList />;

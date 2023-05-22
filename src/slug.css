@@ -1,0 +1,19 @@
+.band-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.band-content2 {
+  text-align: center;
+}
+
+.band-info {
+  margin-top: 20px;
+}
+
+.band-info img {
+  display: block;
+  margin: 0 auto;
+}
