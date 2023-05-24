@@ -17,10 +17,38 @@
 }
 
 .band-info p {
+
   text-align: left;
 }
 
 .band-info img {
   margin-right: 20px;
   flex-shrink: 0;
+}
+
+@media screen {
+  
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+  .band-ip {
+color: aquamarine;
+    text-align: left;
+  }
+  
+  .band-content2 {
+    text-align: center;
+  }
+  
+  .band-info {
+    margin-top: 20px;
+  }
+  
+
+  
+  
+  
 }

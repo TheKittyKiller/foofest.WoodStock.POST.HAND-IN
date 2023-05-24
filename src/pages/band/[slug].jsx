@@ -33,7 +33,7 @@ const BandDetails = () => {
     return `https://source.unsplash.com/200x200/?music,bands/${randomNumber}`;
   };
 
-  console.log(band.members)
+
   return (
     <div className="band-container2">
       <div className="band-content2">
