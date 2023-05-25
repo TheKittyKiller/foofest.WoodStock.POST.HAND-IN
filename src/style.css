@@ -1,0 +1,31 @@
+.grid-container {
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center; /* Center the logo vertically */
+  height: 100vh; /* Set the height of the container to fill the viewport */
+}
+
+.logo {
+  flex: 0 0 auto; /* Prevent the logo from growing or shrinking */
+  margin-right: auto; /* Push the logo to the center */
+  width: 50rem;
+}
+
+.navbar {
+  flex: 1; /* Allow the navbar to grow and take available space */
+  display: flex; /* Display navbar items vertically */
+  flex-direction: column; /* Arrange navbar items in a column */
+  justify-content: center; /* Center navbar items vertically */
+  align-items: flex-end; /* Align navbar items to the right side */
+  padding: 2rem;
+  
+}
+
+ul {
+  list-style: none; /* Remove default list styles */
+
+}
+
+li {
+  margin-bottom: 10px; /* Add spacing between list items */
+}
