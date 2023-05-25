@@ -27,7 +27,7 @@ const HomePage = () => {
       </div>
        </div>
       <div className="content">
-        <h3>Hello</h3>
+        <h2>Hello</h2>
         <p className="text-white text-left mt-2">
           We've got a few options for bookings, so why not let us help you find the right one for you. <br />
           Start the process below; we promise it's not a horrible experience.
@@ -45,7 +45,8 @@ const HomePage = () => {
           <h2 className="event-page-title">VISIT OUR EVENT PAGE FOR BRAND INFO SCHEDULE ETC</h2>
 
           <button className="event-page-button">Take me there</button>
-
+          
+<br></br><br></br>
           <button className="find-ticket-button">Find Ticket</button>
         </div>
       </div>
