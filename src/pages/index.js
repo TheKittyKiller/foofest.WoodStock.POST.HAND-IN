@@ -42,6 +42,9 @@ const HomePage = () => {
             Get ready to experience the ultimate music festival extravaganza with Foo Festival - where world-class artists, delicious food, and unforgettable moments come together in one epic weekend!
           </p>
 
+             
+            
+
           <h2 className="event-page-title">VISIT OUR EVENT PAGE FOR BRAND INFO SCHEDULE ETC</h2>
 
           <button className="event-page-button">Take me there</button>
