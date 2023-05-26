@@ -5,17 +5,33 @@ const IndexPage = () => {
   const [vipTickets, setVipTickets] = useState(0);
 
   const handleRegularTicketChange = (e) => {
-    setRegularTickets(parseInt(e.target.value));
+    const selectedTickets = parseInt(e.target.value);
+    const remainingTickets = 10 - vipTickets;
+
+    if (selectedTickets <= remainingTickets) {
+      setRegularTickets(selectedTickets);
+    } else {
+      setRegularTickets(remainingTickets);
+    }
   };
 
   const handleVipTicketChange = (e) => {
-    setVipTickets(parseInt(e.target.value));
+    const selectedTickets = parseInt(e.target.value);
+    const remainingTickets = 10 - regularTickets;
+
+    if (selectedTickets <= remainingTickets) {
+      setVipTickets(selectedTickets);
+    } else {
+      setVipTickets(remainingTickets);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
+    // Perform any necessary logic here, such as processing the ticket purchase
+
+    // Reset the ticket counts
     setRegularTickets(0);
     setVipTickets(0);
   };
@@ -28,10 +44,9 @@ const IndexPage = () => {
           <label>
             Regular Tickets:
             <select value={regularTickets} onChange={handleRegularTicketChange}>
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              {/* Add more options as needed */}
+              {[...Array(11)].map((_, i) => (
+                <option key={i} value={i}>{i}</option>
+              ))}
             </select>
           </label>
         </div>
@@ -39,10 +54,9 @@ const IndexPage = () => {
           <label>
             VIP Tickets:
             <select value={vipTickets} onChange={handleVipTicketChange}>
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              {/* Add more options as needed */}
+              {[...Array(11)].map((_, i) => (
+                <option key={i} value={i}>{i}</option>
+              ))}
             </select>
           </label>
         </div>
