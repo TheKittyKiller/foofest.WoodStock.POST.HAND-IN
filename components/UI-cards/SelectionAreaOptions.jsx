@@ -3,7 +3,7 @@ import React from "react";
 function SelectionAreaOptions(props) {
   return (
     <div>
-      <select onChange={props.selectArea} name="select" id="select">
+      <select onChange={props.selectedArea} name="select" id="select">
         <option value="choose" defaultValue>
           Choose your camping area
         </option>
