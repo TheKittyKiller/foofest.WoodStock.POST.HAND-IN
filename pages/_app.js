@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/ticketForm.css";
 import { useRouter } from "next/router";
 
 

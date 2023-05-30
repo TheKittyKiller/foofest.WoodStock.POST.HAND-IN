@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
+
 const supabaseUrl = 'https://xpvkvqbuycmzxagcqvvr.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhwdmt2cWJ1eWNtenhhZ2NxdnZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODU0NDg3NzksImV4cCI6MjAwMTAyNDc3OX0.8SiiRoXfGKSslpHtIr_JD3PEeTflFIA1N4IVsUsjkFU';
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -55,56 +56,42 @@ const TicketForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="max-w-md mx-auto bg-white p-8 border rounded shadow">
-        <h2 className="text-2xl font-bold mb-4">Ticket Information</h2>
+    <div className="container">
+      <div className="form-container">
+        <h2>Ticket Information</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="fullName" className="block font-medium mb-1">
-              Full Name
-            </label>
+          <div>
+            <label htmlFor="fullName">Full Name</label>
             <input
               type="text"
               id="fullName"
               value={fullName}
               onChange={handleFullNameChange}
-              className="w-full border-gray-300 rounded focus:border-indigo-500 focus:ring-indigo-500"
               required
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block font-medium mb-1">
-              Email
-            </label>
+          <div>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
               value={email}
               onChange={handleEmailChange}
-              className="w-full border-gray-300 rounded focus:border-indigo-500 focus:ring-indigo-500"
               required
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="dateOfBirth" className="block font-medium mb-1">
-              Date of Birth
-            </label>
+          <div>
+            <label htmlFor="dateOfBirth">Date of Birth</label>
             <input
               type="date"
               id="dateOfBirth"
               value={dateOfBirth}
               onChange={handleDateOfBirthChange}
-              className="w-full border-gray-300 rounded focus:border-indigo-500 focus:ring-indigo-500"
               required
             />
           </div>
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
-            >
-              Next Ticket
-            </button>
+          <div>
+            <button type="submit">Next Ticket</button>
           </div>
         </form>
       </div>
@@ -113,4 +100,3 @@ const TicketForm = () => {
 };
 
 export default TicketForm;
-
