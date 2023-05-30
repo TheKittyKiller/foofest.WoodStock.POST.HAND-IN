@@ -1,6 +1,11 @@
 @import url("./generalities.css");
 @import url('https://fonts.googleapis.com/css2?family=Baumans&family=Bungee+Inline&family=Bungee+Shade&family=Cairo&family=Faster+One&family=Fugaz+One&family=Inter:wght@300;600;900&family=JetBrains+Mono:wght@100;800&family=Joan&family=Kdam+Thmor+Pro&family=Keania+One&family=Major+Mono+Display&family=MedievalSharp&family=Roboto&family=Rubik+Mono+One&family=Space+Grotesk:wght@500;700&family=Syncopate:wght@700&family=Syne:wght@700;800&family=Tilt+Prism&family=Ubuntu+Mono:wght@400;700&display=swap');
 
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
 :root {
   /* Icons and illustrations colours */
   --accent-green: #24ad42;
