@@ -9,11 +9,9 @@ function InputField(props) {
         <h3>{props.price}</h3>
       </div>
       <div >
-        
+         {props.title === "Regular Tickets" && <NumericInput min={0} max={10} step={1} defaultValue={0} mobile onChange={props.updateRegularTickets} />}
 
-        {props.title === "Regular" && <NumericInput min={0} max={10} step={1} defaultValue={0} mobile onChange={props.updateRegTickets} />}
-
-        {props.title === "VIP" && <NumericInput min={0} max={10} step={1} defaultValue={0} mobile onChange={props.updateVIPTickets} />}
+        {props.title === "VIP Tickets" && <NumericInput min={0} max={10} step={1} defaultValue={0} mobile onChange={props.updateVIPTickets} />}
       </div>
     </div>
   );

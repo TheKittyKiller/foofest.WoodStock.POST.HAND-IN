@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-
+import CulculateFunction from "../../components/UI-cards/calculatefunction";
 import InputField from "../../components/UI-cards/InputField";
 import SelectionAreaOptions from "../../components/UI-cards/SelectionAreaOptions"; 
 
@@ -8,21 +8,21 @@ function firstStepBooking(props) {
   const availableSpotArray = props.availableSpotData;
   const router = useRouter();
   async function confirmBooking() {
-    const id = await reserveCampingSpot(props);
+    const id = await reserveCampingSpot(props.bookingInfos.selectedArea);
     await spotAreaValid(id);
   }
 
   async function spotAreaValid(id) {
-    const area = props.selectedArea;
+    const area = props.bookingInfos.selectedArea;
     const index = availableSpotArray.findIndex((item) => item.area === area);
     const available = availableSpotArray[index]?.available || 0;
 
-    if (props.totalTickets <= available) {
-      props.setbookingInfos({ ...props, validates: true, orderID: id });
+    if (props.bookingInfos.totalTickets <= available) {
+      props.setbookingInfos({ ...props.bookingInfos, validates: true, orderID: id });
 
       router.push("/tickets/bookingStep2");
 
-      props.setbookingInfos({ ...props, validates: false });
+      props.setbookingInfos({ ...props.bookingInfos, validates: false });
 
     }
   }
@@ -65,7 +65,7 @@ function firstStepBooking(props) {
         selectOption5={availableSpotArray[4]?.area}
         selectOption5Space={availableSpotArray[4]?.available}
       />
-      
+      <CulculateFunction orderInfo={props.orderInfo} setOrderInfo={props.setOrderInfo} /> 
       <div>
         <button  onClick={cancelBooking}>
           Cancel
@@ -77,8 +77,6 @@ function firstStepBooking(props) {
     </div>
   );
 }
-
-
 export default firstStepBooking;
 
 
