@@ -1,5 +1,4 @@
 import React from "react";
-
 import sendDataDB from "../../components/api/SupaBase"
 import { useRouter } from "next/router";
 import CulculateFunction from "../../components/UI-cards/calculatefunction";
@@ -50,44 +49,44 @@ function bookingStep4(props) {
 <NavBar/>
         <h2>Payment Information</h2>
         <h5>Please Enter Your Credit Card Information.</h5>
-        <div className="payment-field">
+        <div >
           <h3>Credit Card Details</h3>
           <form>
             <div>
-              <label htmlFor="form-name">
+              <label >
                 Name On Card
                 <input required type="text" name="name" id="form-name" placeholder="Eren Jæger" />
               </label>
             </div>
             <div>
-              <label htmlFor="form-card">
+              <label >
                 Card Number
                 <input required mask="9999 9999 9999 9999" maskChar={null} placeholder={"1234 1234 1234 1234"} name="cardNo" id="form-cardNo" onBlur={props.verify} />
               </label>
 
-              <label htmlFor="form-expiry">
+              <label>
                 Expiry Date
                 <input required mask="99/99" maskChar={null} placeholder={"12/34"} name="expiry" id="form-expiry" onBlur={props.verify} />
               </label>
 
-              <label htmlFor="form-cvc">
+              <label >
                 CVC Number
                 <input required type="text" name="cvc" id="form-cvc" inputMode="numeric" maxLength="3" onBlur={props.verify} placeholder={123} />
               </label>
             </div>
             <div>
-              <label htmlFor="form-email">
+              <label >
                 Email
                 <input required type="email" name="email" id="form-email" onBlur={props.verify} placeholder={"Eren-Jæger@yahoo.dk"} />
               </label>
 
-              <label htmlFor="form-phone">
+              <label >
                 Phone Number
                 <input mask="99 99 99 99" maskChar={null} required type="text" name="phone" id="form-phone" placeholder={"01 23 45 67"} />
               </label>
             </div>
             <div>
-              <label htmlFor="form-address">
+              <label>
                 Billing Address
                 <textarea required name="address" id="form-address" placeholder="Guldbergsgade 29N, 2200 København" />
               </label>
