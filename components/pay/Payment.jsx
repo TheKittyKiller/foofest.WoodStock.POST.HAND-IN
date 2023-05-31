@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './PaymentDetails.module.css';
+import Link from 'next/link';
 
 const PaymentDetails = () => {
   return (
@@ -19,7 +20,7 @@ const PaymentDetails = () => {
           <label htmlFor="cvv">CVV:</label>
           <input type="text" id="cvv" name="cvv" required />
 
-          <button type="submit">Pay</button>
+         <Link href='./thanks.js'>  <button type="submit">Pay</button></Link>
         </form>
       </div>
     </div>
