@@ -6,13 +6,13 @@ function CulculateFunction(props) {
   const grandTotal = totalVIP + totalReg + 99;
 
   return (
-    <div className="order-overview">
+    <div>
       <h3>Your order</h3>
 
 
       {props.orderInfo.vipTickets > 0 && (
-        <section className="order-overview-tickets">
-          <div className="overview-item ticket">
+        <section >
+          <div >
             <h4>{props.orderInfo.vipTickets > 1 ? "VIP tickets" : "VIP ticket"}</h4>
             <h4>X{props.orderInfo.vipTickets}</h4>
             <h4>{totalVIP},-</h4>
@@ -21,8 +21,8 @@ function CulculateFunction(props) {
       )}
 
       {props.orderInfo.regularTickets > 0 && (
-        <section className="order-overview-tickets">
-          <div className="overview-item ticket">
+        <section >
+          <div >
             <h4>{props.orderInfo.regularTickets > 1 ? "Regular tickets" : "Regular ticket"}</h4>
             <h4>X{props.orderInfo.regularTickets}</h4>
             <h4>{totalReg},-</h4>
@@ -32,15 +32,15 @@ function CulculateFunction(props) {
 
 
       {props.orderInfo.selectedArea !== "" && (
-        <section className="order-overview-camp overview-item">
+        <section >
           <h4>{props.orderInfo.selectedArea}</h4>
         </section>
       )}
 
 
       {props.orderInfo.tentService && (
-        <section className="order-overview-addons">
-          <div className="overview-item">
+        <section >
+          <div >
             <h4>Tent set up</h4>
             <h4>{props.setUpPrice},-</h4>
           </div>
@@ -48,8 +48,8 @@ function CulculateFunction(props) {
       )}
 
       {props.orderInfo.greenCamping && (
-        <section className="order-overview-addons">
-          <div className="overview-item">
+        <section >
+          <div >
             <h4>Green camping</h4>
             <h4>{props.tentPrice},-</h4>
           </div>
@@ -57,14 +57,14 @@ function CulculateFunction(props) {
       )}
 
 
-      <section className="order-overview-fee overview-item">
+      <section >
         <h4>Booking fee</h4>
         <h4>1</h4>
         <h4>99,-</h4>
       </section>
 
 
-      <section className="order-overview-total overview-item">
+      <section >
         <h4>Total</h4>
 
         {props.orderInfo.greenCamping && props.orderInfo.tentService ? (

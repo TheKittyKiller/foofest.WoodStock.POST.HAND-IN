@@ -1,51 +1,32 @@
 import "../styles/globals.css";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
+import {
+  updateRegularTickets,
+  updateVIPTickets,
+  tentSetUp,
+  tentGreen,
+  selectArea,
+  setOrderID,
+} from "./orderFunctions";
 
 function MyApp({ Component, pageProps }) {
   const [orderInfo, setOrderInfo] = useState({
     vipTickets: 0,
     regularTickets: 0,
     totalTickets: 0,
-  validates: null,
-  selectedArea: "",
+    validates: null,
+    selectedArea: "",
     tentService: false,
     greenCamping: false,
     totalCost: 0,
-    validates: null,
     orderID: "",
     guests: [],
- });
+  });
 
-  useEffect(() => {
-    function setTickets() {
-      let totalTickets = orderInfo.vipTickets + orderInfo.regularTickets;
-      setOrderInfo({ ...orderInfo, totalTickets: totalTickets });
-    }
-    setTickets();
-  }, [orderInfo.regularTickets, orderInfo.vipTickets]);
-
-  function updateRegularTickets(event) {
-    let tickReg = event;
-    setOrderInfo({ ...orderInfo, regularTickets: tickReg });
-  }
-  function updateVIPTickets(event) {
-    let tickVIP = event;
-    setOrderInfo({ ...orderInfo, vipTickets: tickVIP });
-  }
-
-  function tentSetUp(event) {
-    console.log("setup check: ", event.target);
-    let tentChoice = event.target.checked;
-    setOrderInfo({ ...orderInfo, tentService: tentChoice });
-  }
-  function tentGreen(event) {
-    console.log("tentgreen check: ", event.target);
-    let tentChoice = event.target.checked;
-    setOrderInfo({ ...orderInfo, greenCamping: tentChoice });
-  }
   let tentPrice = 249;
   let setUpPrice;
   let tentSize = "";
+
   if (orderInfo.totalTickets <= 2) {
     setUpPrice = 299;
     tentSize = "2-person tent";
@@ -63,45 +44,51 @@ function MyApp({ Component, pageProps }) {
     tentSize = "2-person tent";
   }
 
-  const selectArea = (e) => {
-    setOrderInfo({
-      ...orderInfo,
-      selectedArea: e.target.value,
-    });
-  };
 
-  // ORDER ID
-  function setOrderID(id) {
-    console.log("setOrderID has this id:", id);
-    setOrderInfo({ ...orderInfo, orderID: id });
-    console.log("orderID is set to:", orderInfo.orderID);
+
+  function handleUpdateRegularTickets(event) {
+    updateRegularTickets(event, orderInfo, setOrderInfo);
+  }
+
+  function handleUpdateVIPTickets(event) {
+    updateVIPTickets(event, orderInfo, setOrderInfo);
+  }
+
+  function handleTentSetUp(event) {
+    tentSetUp(event, orderInfo, setOrderInfo);
+  }
+
+  function handleTentGreen(event) {
+    tentGreen(event, orderInfo, setOrderInfo);
+  }
+
+  function handleSelectArea(e) {
+    selectArea(e, orderInfo, setOrderInfo);
+  }
+
+  function handleSetOrderID(id) {
+    setOrderID(id, orderInfo, setOrderInfo);
   }
 
 
   return (
     <>
-
-        <Component
-          updateRegularTickets={updateRegularTickets}
-          updateVIPTickets={updateVIPTickets}
-          {...pageProps}
-          orderInfo={orderInfo}
-          tentSetUp={tentSetUp}
-          tentGreen={tentGreen}
-          selectedArea={selectArea}
-          tentPrice={tentPrice}
-          setUpPrice={setUpPrice}
-          tentSize={tentSize}
-          setOrderInfo={setOrderInfo}
-          setOrderID={setOrderID}
-        />
-
+      <Component
+        updateRegularTickets={handleUpdateRegularTickets}
+        updateVIPTickets={handleUpdateVIPTickets}
+        {...pageProps}
+        orderInfo={orderInfo}
+        tentSetUp={handleTentSetUp}
+        tentGreen={handleTentGreen}
+        selectedArea={handleSelectArea}
+        tentPrice={tentPrice}
+        setUpPrice={setUpPrice}
+        tentSize={tentSize}
+        setOrderInfo={setOrderInfo}
+        setOrderID={handleSetOrderID}
+      />
     </>
   );
 }
 
 export default MyApp;
-
-
-
-

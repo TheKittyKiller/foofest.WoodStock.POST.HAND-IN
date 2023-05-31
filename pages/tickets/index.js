@@ -127,7 +127,7 @@ function FirstStepBooking(props) {
         selectOption5={availableSpotArray[4]?.area}
         selectOption5Space={availableSpotArray[4]?.available}
       />
-      <CulculateFunction orderInfo={props.orderInfo} setOrderInfo={props.setOrderInfo} />
+      {<CulculateFunction orderInfo={props.orderInfo} setOrderInfo={props.setOrderInfo} />}
       <div>
         <button onClick={cancelBooking}>Cancel</button>
         <button onClick={confirmBooking}>Select Camping Options</button>
