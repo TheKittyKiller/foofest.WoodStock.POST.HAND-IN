@@ -8,7 +8,6 @@ function CulculateFunction(props) {
   return (
     <div className="order-overview">
       <h3>Your order</h3>
-      <h5>The Order Will Be Valid for 5 Minutes</h5>
 
 
       {props.orderInfo.vipTickets > 0 && (

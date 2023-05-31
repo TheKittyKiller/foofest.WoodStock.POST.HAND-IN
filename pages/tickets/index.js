@@ -23,58 +23,55 @@ function FirstStepBooking(props) {
   }
 
   async function spotAreaValid(id) {
-    const areaArray = availableSpotArray; // Assign the availableSpotArray to areaArray
 
+    if (props.orderInfo.selectedArea == "Svartheim") {
+      if (props.orderInfo.totalTickets <= availableSpotArray[0].available) {
+        props.setOrderInfo({ ...props.orderInfo, validates: true, orderID: id });
+        router.push("/tickets/bookingStep2");
+      } else {
+        props.setOrderInfo({ ...props.orderInfo, validates: false });
 
-    
-    if (props.orderInfo.selectedArea === "Svartheim") {
-      if (props.orderInfo.totalTickets <= areaArray[0]?.available) {
+      }
+    }
+    if (props.orderInfo.selectedArea == "Nilfheim") {
+      if (props.orderInfo.totalTickets <= availableSpotArray[1].available) {
         props.setOrderInfo({ ...props.orderInfo, validates: true, orderID: id });
-        console.log("area validation: all good");
         router.push("/tickets/bookingStep2");
       } else {
         props.setOrderInfo({ ...props.orderInfo, validates: false });
-        console.log("area validation: no bueno");
+
       }
-    } else if (props.orderInfo.selectedArea === "Nilfheim") {
-      if (props.orderInfo.totalTickets <= areaArray[1]?.available) {
+    }
+    if (props.orderInfo.selectedArea == "Helheim") {
+      if (props.orderInfo.totalTickets <= availableSpotArray[2].available) {
         props.setOrderInfo({ ...props.orderInfo, validates: true, orderID: id });
-        console.log("area validation: all good");
         router.push("/tickets/bookingStep2");
       } else {
         props.setOrderInfo({ ...props.orderInfo, validates: false });
-        console.log("area validation: no bueno");
+
       }
-    } else if (props.orderInfo.selectedArea === "Helheim") {
-      if (props.orderInfo.totalTickets <= areaArray[2]?.available) {
+    }
+    if (props.orderInfo.selectedArea == "Muspelheim") {
+      if (props.orderInfo.totalTickets <= availableSpotArray[3].available) {
         props.setOrderInfo({ ...props.orderInfo, validates: true, orderID: id });
-        console.log("area validation: all good");
         router.push("/tickets/bookingStep2");
       } else {
         props.setOrderInfo({ ...props.orderInfo, validates: false });
-        console.log("area validation: no bueno");
+
       }
-    } else if (props.orderInfo.selectedArea === "Muspelheim") {
-      if (props.orderInfo.totalTickets <= areaArray[3]?.available) {
+    }
+    if (props.orderInfo.selectedArea == "Alfheim") {
+      if (props.orderInfo.totalTickets <= availableSpotArray[4].available) {
         props.setOrderInfo({ ...props.orderInfo, validates: true, orderID: id });
-        console.log("area validation: all good");
-        router.push("/tickets/bookingStep2");
+      router.push("/tickets/bookingStep2");
       } else {
         props.setOrderInfo({ ...props.orderInfo, validates: false });
-        console.log("area validation: no bueno");
+
       }
-    } else if (props.orderInfo.selectedArea === "Alfheim") {
-      if (props.orderInfo.totalTickets <= areaArray[4]?.available) {
-        props.setOrderInfo({ ...props.orderInfo, validates: true, orderID: id });
-        console.log("area validation: all good");
-        router.push("/tickets/bookingStep2");
-      } else {
-        props.setOrderInfo({ ...props.orderInfo, validates: false });
-        console.log("area validation: no bueno");
-      }
-    } else {
+    }
+    if (props.orderInfo.selectedArea == "") {
       props.setOrderInfo({ ...props.orderInfo, validates: false });
-      console.log("area validation: no bueno");
+
     }
   }
 
@@ -103,9 +100,8 @@ function FirstStepBooking(props) {
       <h2>Select your tickets</h2>
       <InputField
         updateRegularTickets={props.updateRegularTickets}
-        updateVIPTickets={props.updateVIPTickets}
         title={"Regular"}
-        name={"RegularTicket"}
+        name={"RegTicket"}
         price={"799,-"}
         setTickets={props.setTickets}
       />
@@ -118,8 +114,8 @@ function FirstStepBooking(props) {
       />
       <h2>Select your camping area</h2>
       <SelectionAreaOptions
-      selectArea={props.selectArea}
-        selectedSpot={props.selectedSpot}
+      selectedArea={props.selectedArea}
+
         selectOption1={availableSpotArray[0]?.area}
         selectOption1Space={availableSpotArray[0]?.available}
         selectOption2={availableSpotArray[1]?.area}
