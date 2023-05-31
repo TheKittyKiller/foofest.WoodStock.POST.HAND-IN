@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
-
+import NavBar from "../components/nav-bar/navbar";
 
 const supabaseUrl = 'https://xpvkvqbuycmzxagcqvvr.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhwdmt2cWJ1eWNtenhhZ2NxdnZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODU0NDg3NzksImV4cCI6MjAwMTAyNDc3OX0.8SiiRoXfGKSslpHtIr_JD3PEeTflFIA1N4IVsUsjkFU';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const TicketForm = () => {
+
+   
+
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -56,6 +59,8 @@ const TicketForm = () => {
   };
 
   return (
+<div>  
+<NavBar/>
     <div className="container">
       <div className="form-container">
         <h2>Ticket Information</h2>
@@ -96,6 +101,10 @@ const TicketForm = () => {
         </form>
       </div>
     </div>
+
+
+ </div>
+
   );
 };
 
