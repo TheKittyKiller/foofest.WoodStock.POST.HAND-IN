@@ -2,8 +2,8 @@ import React from "react";
 
 import sendDataDB from "../../components/api/SupaBase"
 import { useRouter } from "next/router";
-import CulculateFunction from "../../components/UI-cards/Calculatefunction";
-
+import CulculateFunction from "../../components/UI-cards/calculatefunction";
+import NavBar from "../../components/nav-bar/NavBar";
 
 function bookingStep4(props) {
     const router = useRouter();
@@ -47,7 +47,7 @@ function bookingStep4(props) {
   return (
     <div>
 
-
+<NavBar/>
         <h2>Payment Information</h2>
         <h5>Please Enter Your Credit Card Information.</h5>
         <div className="payment-field">
@@ -56,7 +56,7 @@ function bookingStep4(props) {
             <div>
               <label htmlFor="form-name">
                 Name On Card
-                <input required type="text" name="name" id="form-name" placeholder="Jonas Vingegaard" />
+                <input required type="text" name="name" id="form-name" placeholder="Eren Jæger" />
               </label>
             </div>
             <div>
@@ -78,7 +78,7 @@ function bookingStep4(props) {
             <div>
               <label htmlFor="form-email">
                 Email
-                <input required type="email" name="email" id="form-email" onBlur={props.verify} placeholder={"MonkeyDluffy@yahoo.dk"} />
+                <input required type="email" name="email" id="form-email" onBlur={props.verify} placeholder={"Eren-Jæger@yahoo.dk"} />
               </label>
 
               <label htmlFor="form-phone">

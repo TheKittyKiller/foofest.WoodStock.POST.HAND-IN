@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import CulculateFunction from "../../components/UI-cards/calculatefunction";
 import InputField from "../../components/UI-cards/InputField";
 import SelectionAreaOptions from "../../components/UI-cards/SelectionAreaOptions";
+import NavBar from "../../components/nav-bar/NavBar";
 
 function FirstStepBooking(props) {
   const availableSpotArray = props.availableSpotData;
@@ -96,7 +97,9 @@ function FirstStepBooking(props) {
 
 
   return (
+    
     <div>
+    <NavBar/>
       <h2>Select your tickets</h2>
       <InputField
         updateRegularTickets={props.updateRegularTickets}

@@ -3,7 +3,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import CulculateFunction from "../../components/UI-cards/calculatefunction";
 import TentSetUp from "../../components/UI-cards/TentSetUp";
-
+import NavBar from "../../components/nav-bar/NavBar";
 
 
 function bookingStep2(props) {
@@ -22,6 +22,7 @@ function bookingStep2(props) {
 
   return (
     <div>
+    <NavBar/>
       <section >
 
         <h2>Please Select Your Tent options</h2>
