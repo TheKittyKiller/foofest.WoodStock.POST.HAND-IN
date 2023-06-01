@@ -7,7 +7,6 @@
   
   
   
-  
   .zektion{
     background-color:var(--color-secondary2);
     height: 100vh;
@@ -18,7 +17,7 @@
   
   }
   
-  
+ 
   .zektion > img {
     filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0   10px #4aff03) drop-shadow(0 0 30px #ff0099);
     width: 50%;
@@ -28,14 +27,16 @@
   
   
   }
-  
+  .color {
+    background-color: var(--color-primary1);
+  }
   .container >.bandz{
     margin-left: 5rem;
   }
   
   .lineUp {
     font-size: var(--padding4);
-    color: #4aff03;
+    color: var(--color-accent1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +89,9 @@
     width: 15%;
     margin-inline: 20rem;
    }
-  
+  .header{
+    color:var(--color-accent1);
+  }
    .who{
     display: flex;
     justify-content: center;
@@ -145,7 +148,7 @@
     color: var(--color-accent2);
    }
   
-  
+
    @media only screen and (max-width: 900px) {
     
     .hero{

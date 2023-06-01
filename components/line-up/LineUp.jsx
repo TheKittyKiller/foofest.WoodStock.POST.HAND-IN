@@ -35,7 +35,7 @@ function Bands(props) {
 
   return (
  
-<div>
+<div className={styles.color}>
       <NavBar active="bands"></NavBar>
       
     
@@ -49,7 +49,8 @@ function Bands(props) {
         <BandsGenre genre="Rock" data={rockArr} />
         <BandsGenre genre="Soul" data={soulArr} />
         <BandsGenre genre="World" data={worldArr} />
-      </div></div>
+      </div>
+      </div>
  
   );
 }
