@@ -1,6 +1,6 @@
 import styles from "./NavBar.module.css";
 import Image from "next/image";
-import bands from "../../public/bands.svg";
+import bands from "../../../public/bands.svg";
 import Link from "next/link";
 
 
@@ -16,9 +16,9 @@ function NavBar() {
     <section className={styles.navbarWrapper}>
       <div className={styles.navbar}>
        
-      <Link className={styles.logo} href="/bands">
+      <Link className={styles.logo} href="/homepage">
       <Image src={newLogo} alt="logo"></Image></Link>
-      <Link className={styles.header} href={"/bands"}>
+      <Link className={styles.header} href={"/homepage"}>
         
           <p>Line-Up</p>
         </Link>
