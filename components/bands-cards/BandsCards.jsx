@@ -53,7 +53,7 @@ function Bands(props) {
           <p className="text-secondary1 font-secondary text-big-body text-center leading-10 mx-80 max-w-3xl max-md: ml-2 mr-2 ">Get ready to experience the ultimate music festival extravaganza with Foo Festival - where world-class artists, delicious food, and unforgettable moments come together in one epic weekend!</p>
         </div>
         <div className="flex flex-col items-center justify-center bg-primary1 h-screen w-full">
-          <h1 className="text-accent1 font-main font-bold text-h2 text-center max-md:text-h4 ">VISIT OUR <span className="text-accent2">EVENT</span> PAGE FOR <br />BAND INFO <br />SCHEDULE <br />ETC</h1>
+          <h1 className="text-accent1 font-main font-bold text-h2 text-center max-md:text-h4 ">VISIT OUR <span className="text-accent2">EVENT</span> PAGE FOR <br/>BAND INFO <br/>SCHEDULE <br />ETC</h1>
         </div>
         <Footer></Footer>
       </div>
