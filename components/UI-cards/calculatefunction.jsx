@@ -7,8 +7,40 @@ function CalculateFunction(props) {
   const totalReg = 799 * orderInfo.regularTickets;
   const grandTotal = totalVIP + totalReg + 99;
 
-  
+  let tentPrice = 249;
+  let setUpPrice;
+  let tentSize = "";
 
+  if (orderInfo.totalTickets <= 2) {
+    setUpPrice = 299;
+
+  } else if (orderInfo.totalTickets === 3) {
+    setUpPrice = 399;
+
+  } else if (orderInfo.totalTickets === 4) {
+    setUpPrice = 598;
+
+  } else if (orderInfo.totalTickets === 5) {
+    setUpPrice = 798;
+
+  } else if (orderInfo.totalTickets === 6) {
+    setUpPrice = 1198;
+
+  } else if (orderInfo.totalTickets === 7) {
+    setUpPrice = 1398;
+
+  } else if (orderInfo.totalTickets === 8) {
+    setUpPrice = 1498;
+
+  } else if (orderInfo.totalTickets === 9) {
+    setUpPrice = 1698;
+
+
+
+  } else {
+    setUpPrice =1898;
+
+  }
   return (
     <div>
       <h3>Your order</h3>
