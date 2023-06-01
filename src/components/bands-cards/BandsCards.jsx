@@ -5,7 +5,7 @@ import BandsGenre from "./bands-genre/BandsGenre";
 import NavBar from "../nav-bar/NavBar";
 import Footer from "../footer/footer";
 import { useState } from "react";
-import bands1 from "../../public/bands1.svg";
+import bands1 from "../../../public/bands1.svg";
 
 function Bands(props) {
   const [newLogo] = useState(bands1);
