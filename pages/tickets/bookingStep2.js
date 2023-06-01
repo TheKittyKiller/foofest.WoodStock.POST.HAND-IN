@@ -43,7 +43,7 @@ function BookingStep2(props) {
 
   }
   function nextStep() {
-    router.push("/tickets/bookingStep5");
+    router.push("/tickets/bookingStep3");
   }
 
   function CancelBook() {
