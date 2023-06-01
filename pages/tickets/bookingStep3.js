@@ -4,6 +4,9 @@ import { useRouter } from "next/router";
 import CulculateFunction from "../../components/UI-cards/calculatefunction";
 import NavBar from "../../components/nav-bar/NavBar";
 
+import InputMask from "react-input-mask";
+import styles from "./ticketStyles.module.css";
+
 function BookingStep4(props) {
   const router = useRouter();
 
@@ -46,13 +49,13 @@ function BookingStep4(props) {
   return (
     <div>
       <NavBar />
-      <h2>Payment Information</h2>
+      <h2 className={styles.zabi}>Payment Information</h2>
       <h5>Please Enter Your Credit Card Information.</h5>
       <div>
         <h3>Credit Card Details</h3>
         <form>
           <div>
-            <label>
+            <label htmlFor="form-name">
               Name On Card
               <input required type="text" name="name" id="form-name" placeholder="Eren Jæger" />
             </label>
@@ -60,14 +63,16 @@ function BookingStep4(props) {
           <div>
             <label>
               Card Number
-              <input required mask="9999 9999 9999 9999" maskChar={null} placeholder={"1234 1234 1234 1234"} name="cardNo" id="form-cardNo" onBlur={props.verify} />
+              <InputMask required mask="9999 9999 9999 9999" maskChar={null} placeholder={"1234 1234 1234 1234"} name="cardNo" id="form-cardNo" onBlur={props.verify} />
             </label>
-
+          </div>
+          <div>
             <label>
               Expiry Date
-              <input required mask="99/99" maskChar={null} placeholder={"12/34"} name="expiry" id="form-expiry" onBlur={props.verify} />
+              <InputMask required mask="99/99" maskChar={null} placeholder={"12/34"} name="expiry" id="form-expiry" onBlur={props.verify} />
             </label>
-
+          </div>
+          <div>
             <label>
               CVC Number
               <input required type="text" name="cvc" id="form-cvc" inputMode="numeric" maxLength="3" onBlur={props.verify} placeholder={123} />
@@ -78,10 +83,11 @@ function BookingStep4(props) {
               Email
               <input required type="email" name="email" id="form-email" onBlur={props.verify} placeholder={"Eren-Jæger@yahoo.dk"} />
             </label>
-
+          </div>
+          <div>
             <label>
               Phone Number
-              <input mask="99 99 99 99" maskChar={null} required type="text" name="phone" id="form-phone" placeholder={"01 23 45 67"} />
+              <InputMask mask="99 99 99 99" maskChar={null} required type="text" name="phone" id="form-phone" placeholder={"01 23 45 67"} />
             </label>
           </div>
           <div>
