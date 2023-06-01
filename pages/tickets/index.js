@@ -104,7 +104,7 @@ function FirstStepBooking(props) {
       <InputField
         updateRegularTickets={props.updateRegularTickets}
         title={"Regular"}
-        name={"RegTicket"}
+        name={"Regular"}
         price={"799,-"}
         setTickets={props.setTickets}
       />
