@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../UI-cards/InputField.module.css"
 
 function SelectionAreaOptions(props) {
   return (

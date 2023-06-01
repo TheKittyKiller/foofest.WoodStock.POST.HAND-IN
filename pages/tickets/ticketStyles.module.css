@@ -1,5 +1,83 @@
+.container {
+  max-width: 37.5rem;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 5rem;
+
+}
+
+.fullBody{
+  background-color: #29b9a4;
+
+}
+
+.header1{
+  
+      color: #000000;
+      font-size: 2.3rem;
+      font-weight: 800;
+
+  font-family: inter;}
 
 
-  .zabi{
-    margin-top: 2rem;
-  }
+  .header2{
+  
+    color: #000000;
+    font-size: 2.3rem;
+    font-weight: 800;
+margin-top: 1rem;
+font-family: inter;}
+
+.inputz{
+  margin-bottom: 20rem;
+}
+
+.input-field label {
+  display: block;
+  font-weight: bold;
+}
+
+.Inputfield>.inputz {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.0625rem solid #aa3131;
+  border-radius: 0.25rem;
+}
+
+.selection-area {
+  margin-bottom: 2rem;
+}
+
+.selection-area label {
+  display: block;
+  font-weight: bold;
+}
+
+.selection-area select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+}
+
+.buttons button {
+  margin-right: 0.625rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons button.cancel {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.buttons button.confirm {
+  background-color: #007
+}

@@ -4,6 +4,8 @@ import CulculateFunction from "../../components/UI-cards/calculatefunction";
 import InputField from "../../components/UI-cards/InputField";
 import SelectionAreaOptions from "../../components/UI-cards/SelectionAreaOptions";
 import NavBar from "../../components/nav-bar/NavBar";
+import styles from "../tickets/ticketStyles.module.css";
+
 
 function FirstStepBooking(props) {
   const availableSpotArray = props.availableSpotData;
@@ -98,24 +100,27 @@ function FirstStepBooking(props) {
 
   return (
     
-    <div>
+   <div className={styles.fullBody}>
     <NavBar/>
-      <h2>Select your tickets</h2>
-      <InputField
+    <div className={styles.container}>
+      <h2 className={styles.header1}>Select your tickets</h2>
+      <InputField 
         updateRegularTickets={props.updateRegularTickets}
         title={"Regular"}
         name={"Regular"}
         price={"799,-"}
         setTickets={props.setTickets}
       />
-      <InputField
+      <InputField 
         
         updateVIPTickets={props.updateVIPTickets}
+
         title={"VIP"}
         name={"VIPTicket"}
         price={"1299,-"}
+
       />
-      <h2>Select your camping area</h2>
+      <h2 className={styles.header2}>Select your camping area</h2>
       <SelectionAreaOptions
       selectedArea={props.selectedArea}
 
@@ -134,7 +139,7 @@ function FirstStepBooking(props) {
       <div>
         <button onClick={cancelBooking}>Cancel</button>
         <button onClick={confirmBooking}>Select Camping Options</button>
-      </div>
+      </div></div>
     </div>
   );
 }

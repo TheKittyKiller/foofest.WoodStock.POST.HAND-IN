@@ -1,5 +1,6 @@
 import React from "react";
 import NumericInput from "react-numeric-input";
+import styles from "../UI-cards/InputField.module.css"
 
 function InputField(props) {
   return (
@@ -9,9 +10,9 @@ function InputField(props) {
         <h3>{props.price}</h3>
       </div>
       <div >
-         {props.title === "Regular" && <NumericInput min={0} max={5} step={1} defaultValue={0} mobile onChange={props.updateRegularTickets} />}
+         {props.title === "Regular" && <NumericInput  className={styles.inputz} min={0} max={10} step={1} defaultValue={0} mobile onChange={props.updateRegularTickets} />}
 
-        {props.title === "VIP" && <NumericInput min={0} max={5} step={1} defaultValue={0} mobile onChange={props.updateVIPTickets} />}
+        {props.title === "VIP" && <NumericInput className={styles.inputz} min={0} max={10} step={1} defaultValue={0} mobile onChange={props.updateVIPTickets} />}
       </div>
     </div>
   );
