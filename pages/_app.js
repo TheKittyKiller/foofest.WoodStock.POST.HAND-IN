@@ -63,8 +63,7 @@ function MyApp({ Component, pageProps }) {
         tentSetUp={handleTentSetUp}
         tentGreen={handleTentGreen}
         selectedArea={handleSelectArea}
-      
-        setOrderInfo={setOrderInfo}
+    setOrderInfo={setOrderInfo}
         setOrderID={handleSetOrderID}
       />
     </>

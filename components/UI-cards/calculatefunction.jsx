@@ -1,84 +1,116 @@
 import React from "react";
 
-function CulculateFunction(props) {
-  const totalVIP = 1299 * props.orderInfo.vipTickets;
-  const totalReg = 799 * props.orderInfo.regularTickets;
+function CalculateFunction(props) {
+  const { orderInfo } = props;
+
+  const totalVIP = 1299 * orderInfo.vipTickets;
+  const totalReg = 799 * orderInfo.regularTickets;
   const grandTotal = totalVIP + totalReg + 99;
+
+  
 
   return (
     <div>
       <h3>Your order</h3>
 
-
-      {props.orderInfo.vipTickets > 0 && (
-        <section >
-          <div >
-            <h4>{props.orderInfo.vipTickets > 1 ? "VIP tickets" : "VIP ticket"}</h4>
-            <h4>X{props.orderInfo.vipTickets}</h4>
+      {orderInfo.vipTickets > 0 && (
+        <section>
+          <div>
+            <h4>{orderInfo.vipTickets > 1 ? "VIP tickets" : "VIP ticket"}</h4>
+            <h4>X{orderInfo.vipTickets}</h4>
             <h4>{totalVIP},-</h4>
           </div>
         </section>
       )}
 
-      {props.orderInfo.regularTickets > 0 && (
-        <section >
-          <div >
-            <h4>{props.orderInfo.regularTickets > 1 ? "Regular tickets" : "Regular ticket"}</h4>
-            <h4>X{props.orderInfo.regularTickets}</h4>
+      {orderInfo.regularTickets > 0 && (
+        <section>
+          <div>
+            <h4>{orderInfo.regularTickets > 1 ? "Regular tickets" : "Regular ticket"}</h4>
+            <h4>X{orderInfo.regularTickets}</h4>
             <h4>{totalReg},-</h4>
           </div>
         </section>
       )}
 
-
-      {props.orderInfo.selectedArea !== "" && (
-        <section >
-          <h4>{props.orderInfo.selectedArea}</h4>
+      {orderInfo.selectedArea !== "" && (
+        <section>
+          <h4>{orderInfo.selectedArea}</h4>
         </section>
       )}
 
-
-      {props.orderInfo.tentService && (
-        <section >
-          <div >
+      {orderInfo.tentService && (
+        <section>
+          <div>
             <h4>Tent set up</h4>
-            <h4>{props.setUpPrice},-</h4>
+            <h4>{setUpPrice},-</h4>
           </div>
         </section>
       )}
 
-      {props.orderInfo.greenCamping && (
-        <section >
-          <div >
+      {orderInfo.greenCamping && (
+        <section>
+          <div>
             <h4>Green camping</h4>
-            <h4>{props.tentPrice},-</h4>
+            <h4>{tentPrice},-</h4>
           </div>
         </section>
       )}
 
-
-      <section >
+      <section>
         <h4>Booking fee</h4>
         <h4>1</h4>
         <h4>99,-</h4>
       </section>
 
-
-      <section >
+      <section>
         <h4>Total</h4>
-
-        {props.orderInfo.greenCamping && props.orderInfo.tentService ? (
-          <h4>{grandTotal + props.tentPrice + props.setUpPrice},-</h4>
-        ) : props.orderInfo.greenCamping ? (
-          <h4>{grandTotal + props.tentPrice},-</h4>
-        ) : props.orderInfo.tentService ? (
-          <h4>{grandTotal + props.setUpPrice},-</h4>
+        {orderInfo.greenCamping && orderInfo.tentService ? (
+          <h4>{grandTotal + tentPrice + setUpPrice},-</h4>
+        ) : orderInfo.greenCamping ? (
+          <h4>{grandTotal + tentPrice},-</h4>
+        ) : orderInfo.tentService ? (
+          <h4>{grandTotal + setUpPrice},-</h4>
         ) : (
           <h4>{grandTotal},-</h4>
         )}
       </section>
+
+      <div className="input-box box">
+        <div className="input-text">
+          <h3>{props.title}</h3>
+          <h4>{props.subtitle}</h4>
+          <p>{props.description}</p>
+        </div>
+
+        <div className="price-input">
+          <h3>{props.price}</h3>
+          {props.name === "TentSetup" ? (
+            <div className="checkbox-container">
+              <input
+                name={props.name}
+                type="checkbox"
+                className="hidden"
+                id="checkbox"
+                onChange={props.tentSetUp}
+              />
+              <label htmlFor="checkbox" className="checkbox-label" />
+            </div>
+          ) : (
+            <div className="checkbox-container">
+              <input
+                type="checkbox"
+                className="hidden"
+                id="checkbox2"
+                onChange={props.tentGreen}
+              />
+              <label htmlFor="checkbox2" className="checkbox-label" />
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
 
-export default CulculateFunction;
+export default CalculateFunction;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import CulculateFunction from "../../components/UI-cards/calculatefunction";
+import CalculateFunction from "../../components/UI-cards/CalculateFunction";
 import TentSetUp from "../../components/UI-cards/TentSetUp";
 import NavBar from "../../components/nav-bar/NavBar";
 
@@ -10,25 +10,38 @@ function BookingStep2(props) {
   const orderInfo = props.orderInfo; // Define orderInfo
   let tentPrice = 249;
   let setUpPrice;
-  let tentSize = "";
+
 
   if (orderInfo.totalTickets <= 2) {
     setUpPrice = 299;
-    tentSize = "2-person tent";
+
   } else if (orderInfo.totalTickets === 3) {
     setUpPrice = 399;
-    tentSize = "3-person tent";
+
   } else if (orderInfo.totalTickets === 4) {
     setUpPrice = 598;
-    tentSize = "2 x 2-person tents";
+
   } else if (orderInfo.totalTickets === 5) {
     setUpPrice = 798;
-    tentSize = "1 x 2 person tent & 1 x 3 person tent";
-  } else {
-    setUpPrice = 299;
-    tentSize = "2-person tent";
-  }
 
+  } else if (orderInfo.totalTickets === 6) {
+    setUpPrice = 1198;
+
+  } else if (orderInfo.totalTickets === 7) {
+    setUpPrice = 1398;
+
+  } else if (orderInfo.totalTickets === 8) {
+    setUpPrice = 1498;
+
+  } else if (orderInfo.totalTickets === 9) {
+    setUpPrice = 1698;
+
+
+
+  } else {
+    setUpPrice =1898;
+
+  }
   function nextStep() {
     router.push("/tickets/bookingStep3");
   }
@@ -39,7 +52,7 @@ function BookingStep2(props) {
 
   return (
     <div>
-      <NavBar />
+    <NavBar/>
       <section>
         <h2>Please Select Your Tent options</h2>
 
@@ -47,7 +60,7 @@ function BookingStep2(props) {
           tentSetUp={props.tentSetUp}
           title={"The Staff Can Set The Tent For You"}
           name={"TentSetup"}
-          subtitle={tentSize} // Use tentSize variable
+
           description={"Price Includes The Tents"}
           price={`${setUpPrice},-`} // Use setUpPrice variable
         />
@@ -65,11 +78,15 @@ function BookingStep2(props) {
         </p>
       </section>
 
-      <CulculateFunction
+      <CalculateFunction
         orderInfo={props.orderInfo}
-        setOrderInfo={props.setOrderInfo}
-        tentPrice={tentPrice} // Use tentPrice variable
-        setUpPrice={setUpPrice} // Use setUpPrice variable
+        tentPrice={tentPrice}
+        setUpPrice={setUpPrice}
+        title={props.title}
+        description={props.description}
+        price={props.price}
+        tentSetUp={props.tentSetUp}
+        tentGreen={props.tentGreen}
       />
 
       <div className="booking-steps-buttons">
