@@ -14,15 +14,15 @@
     padding-bottom: 3rem;
 
 }
-   .logo{
-
+   .image{
+    width: 90%;
    } 
 .logo,
 .list{
     display: flex;
     flex-direction: column;
     justify-content: center;
-font-size: var(--type-h4);
+font-size: var(--type-h5);
 }
 
 .list{
@@ -46,7 +46,7 @@ font-size: var(--type-h4);
 
 .button {
 box-sizing: border-box;
-padding: 1rem 5rem; 
+padding: 0.5rem 3rem; 
 border:solid 8px var(--color-accent2);
 background-color: var(--color-primary1);  
 color: var(--color-secondary1);
