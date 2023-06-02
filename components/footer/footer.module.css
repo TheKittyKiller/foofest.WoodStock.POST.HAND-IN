@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     margin: auto;
     width: 70%;
-    min-height: 50vh;
+   
     align-items: center;
     justify-items: center;
 
@@ -14,18 +14,20 @@
     padding-bottom: 3rem;
 
 }
+   .logo{
 
+   } 
 .logo,
 .list{
     display: flex;
     flex-direction: column;
     justify-content: center;
-font-size: var(--type-h3);
+font-size: var(--type-h4);
 }
 
 .list{
  
-    height: 50%;
+ 
     justify-content: space-around;
     border-right:solid var(--color-accent2) 8px;
     padding-right: 2rem;
@@ -48,7 +50,7 @@ padding: 1rem 5rem;
 border:solid 8px var(--color-accent2);
 background-color: var(--color-primary1);  
 color: var(--color-secondary1);
-font-size: var(--type-h4);
+font-size: var(--type-h5);
 }
 
 .left {
@@ -58,16 +60,6 @@ font-size: var(--type-h4);
     align-items: center;
     margin-right: 2rem;
 }
-
-.home {}
-
-.vip {}
-
-.news {}
-
-.info {}
-
-.contact {}
 
 @media (max-width: 767px) {
 .my-class{
