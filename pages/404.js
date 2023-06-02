@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 const Custom404 = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
