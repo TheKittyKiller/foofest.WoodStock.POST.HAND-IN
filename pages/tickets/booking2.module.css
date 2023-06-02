@@ -1,0 +1,49 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--color-primary2);
+}
+
+.container h2{
+    color: var(--color-accent1);
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 2rem;
+    margin-inline: 20rem;
+    margin-bottom: 1rem;
+}
+
+
+.container p{
+    color: var(--color-secondary1);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    margin-inline: 20rem;
+    margin-bottom: .5rem;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  
+
+    
+
+
+     .container h2{
+      font-size: 1.5rem;
+      margin-inline: 0;
+      margin-left: 5rem;
+     }
+
+
+    
+     .container p{
+        font-size: .8rem;
+        margin-inline: 0;
+        margin-left: 5rem;
+       }
+    }

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import CalculateFunction from "../../components/UI-cards/CalculateFunction";
 import TentSetUp from "../../components/UI-cards/TentSetUp";
 import NavBar from "../../components/nav-bar/NavBar";
+import styles from "./booking2.module.css";
 
 function BookingStep2(props) {
   const router = useRouter();
@@ -53,12 +54,15 @@ function BookingStep2(props) {
   return (
     <div>
     <NavBar/>
-      <section>
-        <h2>Please Select Your Tent options</h2>
+      <section className={styles.container}>
+        <h2>Select Your Tent</h2>
+        <p className={styles.bookingfee}>
+          Mandatory booking fee of 99,- Only paid once, even if multiple tickets are bought.
+        </p>
 
         <TentSetUp
           tentSetUp={props.tentSetUp}
-          title={"The Staff Can Set The Tent For You"}
+          title={""}
           name={"TentSetup"}
 
           description={"Price Includes The Tents"}
@@ -69,14 +73,10 @@ function BookingStep2(props) {
           tentGreen={props.tentGreen}
           title={"Green Camping"}
           name={"TentGreen"}
-          description={"Environment Friendly Tents"}
+          description={""}
           price={`${tentPrice},-`} // Use tentPrice variable
         />
 
-        <p className="bookingfee">
-          A mandatory booking fee of 99,- Only paid once, even if multiple tickets are bought
-        </p>
-      </section>
 
       <CalculateFunction
         orderInfo={props.orderInfo}
@@ -97,6 +97,7 @@ function BookingStep2(props) {
           Continue to details
         </button>
       </div>
+    </section>  
     </div>
   );
 }

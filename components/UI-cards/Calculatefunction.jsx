@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./calculate.module.css";
 
 function CalculateFunction(props) {
   const { orderInfo } = props;
@@ -42,8 +43,8 @@ function CalculateFunction(props) {
 
   }
   return (
-    <div>
-      <h3>Your order</h3>
+    <div className={styles.title}>
+      <h3 className={styles.title1}>Your order</h3>
 
       {orderInfo.vipTickets > 0 && (
         <section>
