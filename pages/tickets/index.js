@@ -142,6 +142,9 @@ function FirstStepBooking(props) {
          />
        </div>
        <h2>Camping area</h2>
+
+       
+
        <SelectionAreaOptions
        selectedArea={props.selectedArea}
 
