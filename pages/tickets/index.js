@@ -1,3 +1,4 @@
+
 import React from "react";
 import styles from "./ticketStyles.module.css";
 import { useRouter } from "next/router";
