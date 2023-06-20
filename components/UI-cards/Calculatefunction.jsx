@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "./Calculatefunction.module.css";
 
 function CalculateFunction(props) {
  const { orderInfo } = props;
@@ -14,7 +14,7 @@ function CalculateFunction(props) {
 
  return (
    <div >
-     <h2>Your order</h2>
+     <h2 className={styles.today}>Your order</h2>
 
 
      {orderInfo.vipTickets > 0 && (

@@ -1,7 +1,7 @@
 import React from "react";
 import sendDataDB from "../../components/api/SupaBase";
 import { useRouter } from "next/router";
-import CulculateFunction from "../../components/UI-cards/calculatefunction";
+import CulculateFunction from "../../components/UI-cards/Calculatefunction";
 import NavBar from "../../components/nav-bar/NavBar";
 
 import InputMask from "react-input-mask";
@@ -98,10 +98,12 @@ function BookingStep4(props) {
           </div>
         </form>
       </div>
-
+<br></br><br></br>
+<div className={styles.sum}>     
       <CulculateFunction orderInfo={props.orderInfo} setOrderInfo={props.setOrderInfo} tentPrice={props.tentPrice} setUpPrice={props.setUpPrice} />
-
-      <div className={styles.hero1}>
+</div>
+<br></br>
+      <div className={styles.hero1_1}>
         <button onClick={cancelMethod}>Back</button>
         <button onClick={confirmBooking}>Confirm Payment</button>
       </div>

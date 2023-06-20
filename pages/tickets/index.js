@@ -120,7 +120,7 @@ function FirstStepBooking(props) {
    <div >
    <NavBar/>
      <div className={styles.hero}>
-       <h1>Booking</h1>
+  
           
      </div>    
        <div className={styles.tickets}>
@@ -164,7 +164,7 @@ function FirstStepBooking(props) {
 
        <div className={styles.hero1}>
        {<CulculateFunction  orderInfo={props.orderInfo} setOrderInfo={props.setOrderInfo} />}</div>
-       <div className={styles.hero1}>
+       <div className={styles.hero1_2}>
          <br></br> <br></br>
          <button onClick={cancelBooking}>Cancel</button>
          <button onClick={confirmBooking}>Camping Options</button>

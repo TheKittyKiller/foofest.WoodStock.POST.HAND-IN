@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import CalculateFunction from "../../components/UI-cards/CalculateFunction";
+import CalculateFunction from "../../components/UI-cards/Calculatefunction";
 import TentSetUp from "../../components/UI-cards/TentSetUp";
 import NavBar from "../../components/nav-bar/NavBar";
 import styles from "../tickets/ticketStyles.module.css"

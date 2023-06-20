@@ -5,25 +5,16 @@
   }
 
   .hero{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  
     background-color: var(--color-primary1) ;
-    height: 50vh;
+    height: 5vh;
 
     
   
    }
   
 .hero1 h2{
-    color:aliceblue;
-    font-family: var(--main-font);
-    font-weight: bold;
-    font-size: 3.8rem;
-    margin-inline: 34rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    z-index: 90000;
+margin-left: 5rem;
 
    }
   
@@ -61,9 +52,6 @@
 
 .hero1{
   background-color: var(--color-primary2);
-
-
-
 
  }
 
@@ -108,8 +96,8 @@
       font-size: 2rem;
      }
 
-
-    
+     
+     
      .hero p {
       
       font-size: 1rem;
@@ -149,7 +137,7 @@ margin-top: 0.6rem;
 }
 
 .hero1 button{
-  margin-left: 10rem;
+  margin-left: 15rem;
   margin-bottom: 6rem;
   gap: 5px;
   font-family: inter;
@@ -169,7 +157,49 @@ margin-top: 0.6rem;
 
 
 
+          .hero1_1 button{
 
+            margin-left: 2rem;
+            margin-bottom: 6rem;
+            gap: 5px;
+            font-family: inter;
+            font-size: 1.1rem;
+            
+            background-color:var(--color-primary2);;
+            width: 14rem;
+            height: 70px;
+            
+            
+            
+            color: var(--color-accent2);
+            border: 1px solid #000000;
+            box-shadow: 4px 4px 0px #000000;
+            border-radius: 4px;
+
+          }
+
+          .hero1_2 {background-color: var(--color-primary2);}
+
+          .hero1_2 button{
+
+            margin-left: 5rem;
+            margin-bottom: 6rem;
+         
+            font-family: inter;
+            font-size: 1.1rem;
+            
+            background-color:var(--color-accent1);;
+            width: 14rem;
+            height: 70px;
+            
+            
+            
+            color: var(--color-accent2);
+            border: 1px solid #000000;
+            box-shadow: 4px 4px 0px #000000;
+            border-radius: 4px;
+
+          }
 
 .zabi{
   margin-top: 10rem;
@@ -199,7 +229,7 @@ margin-top: 2rem;
 }
 
 
-
+.sum { margin-left: 2rem;}
 
 
 label.title1{ 
